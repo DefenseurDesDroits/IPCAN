@@ -1,0 +1,181 @@
+
+
+.search-filter, .content-form{
+  background: $colorGrayBackground;
+  padding: 30px 0;
+  margin-bottom: 40px;
+
+  .control-label{
+    color: $colorBlue;
+    font-weight: 700;
+  }
+
+  .form-control{
+      color: $colorBlue;
+      max-width: 269px;
+      border: 1px solid $colorWhite;
+  }
+
+}
+
+.members, .events, .category-membres-fr, .category-membres-en, .category-membres{
+
+
+  .representants{
+    background: $colorGrayBackground;
+    padding: 30px 0;
+
+    .container{
+      max-width: 632px;
+      margin: 0 auto;
+
+      .sstitle{
+        padding-top: 0!important;
+
+      }
+
+
+      li{
+        display: inline-block;
+        width: 162px;
+        margin: 15px 35px;
+        vertical-align: top;
+
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+
+      .team-image{
+        width: 162px;
+        img {
+           border-radius: 50%;
+       }
+      }
+      img {
+          height: auto;
+          max-width: 100%;
+          vertical-align: middle;
+      }
+    }
+  }
+
+  .country, .date{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    padding: 12px 0;
+  }
+
+  .title{
+      font-weight: 700;
+      letter-spacing: 0;
+      text-align: center;
+      padding: 0;
+      min-height: 110px;
+      a{
+          font-weight: 700;
+          color: $colorGray;
+          font-size: 19px;
+          &:hover{
+              color: $colorGray;
+          }
+      }
+  }
+
+  .list-members, .list-events{
+    .item{
+      .visuel{
+        width: 100%;
+      }
+    }
+  }
+
+  .member-article, .event-article, .representants{
+    .container{
+      max-width: 632px;
+    }
+
+    .title{
+      min-height: inherit;
+      font-weight: 400;
+      letter-spacing: -1px;
+    }
+
+     .sstitle{
+       font-weight: 400;
+       letter-spacing: -1px;
+       line-height: 1.5000em;
+        padding-top: 2.000em;
+        padding-bottom: 0.0000em;
+     }
+
+     .txt{
+       font-weight: 400;
+       color: $colorGray;
+       padding:0.8em 0;
+     }
+
+     li{
+       h5{
+         font-weight: 700;
+         font-size: 12px;
+         text-transform: uppercase;
+         letter-spacing: inherit;
+         padding: 15px 0 0 0;
+        text-align: left;
+       }
+       p{
+         font-weight: 400;
+         color: $colorGray;
+         padding:0.8em 0;
+         font-size: 14px;
+         text-align: left;
+       }
+     }
+
+  }
+
+}
+
+
+// MEDIA QUERIES MOBILE LISTE
+@media all and (max-width: 540px) {
+  .members, .events, .category-membres-fr, .category-membres-en, .category-membres{
+    .list-members, .list-events{
+        .item{ width: 100%; }
+      }
+    }
+}
+
+// MEDIA QUERIES MOBILE representants
+@media all and (max-width: 540px) {
+  .members, .events, .category-membres-fr, .category-membres-en, .category-membres{
+    .representants{
+
+      .sstitle{
+        padding-bottom: 2em!important;
+      }
+        ul{
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+
+        li:first-child{
+          margin: 0;
+          text-align: left;
+        }
+    }
+  }
+
+  .members .title a, .events .title a,  .category-membres-fr, .category-membres-en, .category-membres .title a {
+    font-size: 17px;
+  }
+  .members .title, .events .title, .category-membres-fr, .category-membres-en, .category-membres .titles {
+    min-height: inherit;
+    padding-bottom: 25px;
+  }
+}

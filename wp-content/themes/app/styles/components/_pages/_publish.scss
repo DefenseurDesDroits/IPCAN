@@ -1,0 +1,174 @@
+/*** Datepicker ***********/
+
+.ui-widget {
+	font-family: $fontBase;
+	background: $colorBlue;
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	box-shadow: 0 1px 3px #252525;
+}
+
+.ui-datepicker {
+	padding: 0;
+}
+
+.ui-datepicker-header {
+	border: none;
+/*	border-bottom: 1px solid #2d97cb;*/
+	background: transparent;
+	font-weight: normal;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.ui-datepicker-header .ui-state-hover {
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover,
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev {
+	top: 1.7em;
+	border:none;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next span,
+.ui-datepicker .ui-datepicker-prev span {
+	background-image: url(../ipcan/images/icons/ui-icons_ffffff_256x240.png);
+	background-position: -32px -32px;
+	margin-top: 0;
+	top: 0;
+	font-weight: normal;
+}
+
+.ui-datepicker .ui-datepicker-prev span {
+	background-position: -96px -32px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover span {
+	background-position: -96px -48px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover span {
+	background-position: -32px -48px;
+}
+
+.ui-datepicker table {
+	margin: 0;
+}
+
+.ui-datepicker th {
+	padding: 1em 0!important;
+	color: #9fd9f1;
+	font-size: 12px!important;
+
+	font-weight: normal;
+	/*text-shadow: 0 0 2px #45c4f8;*/
+	text-transform: uppercase;
+	border: none;
+	border-top: 1px solid #3fabdc;
+}
+
+.ui-datepicker td {
+	border: none;
+	padding: 0;
+}
+
+td .ui-state-default {
+	background: transparent;
+	border: none;
+	text-align: center!important;
+	padding: 1em 0;
+	margin: 0;
+	font-weight: normal;
+	color: #efefef;
+	font-size: 12px;
+}
+
+td .ui-state-active,
+td .ui-state-hover {
+	background: $colorOrange!important;
+	border-radius: 4px!important;
+	-webkit-border-radius: 4px!important;
+	-moz-border-radius: 4px!important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: inherit;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+
+
+/****************************************/
+
+.publish, .category-publication-fr, .category-publication-en, .category-publication{
+
+	.search-filter{
+		.button--submit{
+			position: relative;
+			margin: 4px 0 0 0;
+			font-weight: 400;
+			text-transform: uppercase;
+			max-width: 269px;
+			font-size: 12px;
+		}
+	}
+
+	.keywords{
+		max-width: 632px;
+		margin: 0 auto;
+		background: #eef2f9;
+		padding: 21px 15px;
+
+		em{ font-weight: 700; font-size: 16px; font-style: normal;}
+		span{ font-weight: 700; font-size: 16px;}
+	}
+
+}
+
+
+@media all and (max-width: 990px) {
+
+		.search-filter .form-control {
+		    max-width: inherit;
+		}
+
+		.search-filter .control-label {
+		    display: block;
+				min-height: 16px;
+		}
+	.publish, .category-publication-fr, .category-publication-en, .category-publication{
+		.search-filter{
+			.button--submit{
+			  max-width: inherit;
+			}
+		}
+	}
+
+
+
+}

@@ -1,0 +1,16 @@
+[title]Large[/title]
+[description]List with details, and medium size icon[/description]
+[before][/before]
+[loop]<ul class="attachments attachments-medium clearfix">
+<li class="clearfix">
+	<a class="pull-left g-medium--1 g-medium--last g-wide--1 thumb" title="%TITLE%" href="%URL%" %NOFOLLOW%>
+		%ICON-80x80%
+	</a>
+	<span class="pull-left g-medium--2 g-medium--last g-wide--3 g-wide--last caption">
+    <strong>%CAPTION_LABEL%</strong>: %CAPTION% <br>
+		<strong>%FILENAME_LABEL%</strong> : %FILENAME% (%FILESIZE%)
+		<a title="%TITLE%" href="%URL%" class="button button--primary cta--download">Télécharger</a>
+	</span>
+</li>
+</ul>[/loop]
+[after][/after]

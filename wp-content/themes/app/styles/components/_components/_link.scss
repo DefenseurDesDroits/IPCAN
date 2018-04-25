@@ -1,0 +1,174 @@
+/**
+*
+* Link
+*
+**/
+
+a {
+  color: $colorBlue;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+
+.cta--download {
+  @include style-cta($colorBlue, $icon-download);
+}
+
+.cta--primary {
+  //@include style-cta($colorBlue, $icon-chevron-right);
+  @include style-cta($colorBlue);
+}
+
+.cta--secondary {
+  @include style-cta($colorOrange);
+  text-transform: uppercase;
+}
+
+
+.cta--nav, .lang-item {
+  @include style-cta($colorWhite);
+}
+
+
+.cta--nav a, .lang-item a{
+  @include style-cta($colorWhite);
+}
+
+/*==========  animations  ==========*/
+.cta--nav a .lang-item a{
+    background: transparent;
+    color: $colorWhite;
+    cursor: pointer;
+    text-decoration: none;
+}
+.cta--nav a, .lang-item a{
+    backface-visibility: hidden;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0px);
+    vertical-align: middle;
+}
+.cta--nav a:before, .lang-item a:before {
+    background: $colorOrange none repeat scroll 0 0;
+    bottom: 0px;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition-duration: 0.3s;
+    transition-property: right;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+a:hover, a:focus, a:active{
+  color: $colorWhite;
+}
+
+.cta--nav a:hover:before, .cta--nav a:focus:before, .cta--nav a:active:before, .cta--nav.current-menu-item a:before {
+    right: 0
+}
+.cta--nav.current-menu-item a:before {
+    right: 0
+}
+.cta--nav.current_page_item a:before {
+    right: 0
+}
+
+.lang-item.current_page_item a:before {
+    right: 0
+}
+
+
+.cta--footer {
+  @include style-cta($colorWhite);
+}
+
+/*==========  animations  ==========*/
+.cta--secondary, .cta--footer, .cta--footer a {
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.actualites .cta--secondary {
+    display: inline!important;
+    padding: 4px 0!important;
+}
+
+.cta--secondary, .cta--footer,  .cta--footer a {
+    backface-visibility: hidden;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0px);
+    vertical-align: middle;
+}
+.cta--secondary:before {
+    background: $colorOrange none repeat scroll 0 0;
+    bottom: 0px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition-duration: 0.3s;
+    transition-property: right;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+.cta--footer a:before {
+    background: $colorOrange none repeat scroll 0 0;
+    bottom: 14px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition-duration: 0.3s;
+    transition-property: right;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+
+
+
+
+.cta--secondary:hover:before, .cta--secondary:focus:before, .cta--secondary:active:before,  .cta--secondary.active:before,
+.cta--footer a:hover:before, .cta--footer a:focus:before, .cta--footer a:active:before,  .cta--footer.active a:before{
+  right:0;
+
+}
+
+.cta--secondary.current-menu-item:before,
+.cta--footer.current-menu-item a:before{
+  right:0;
+
+}
+/*
+.cta--footer:before {
+    background: $colorOrange none repeat scroll 0 0;
+    bottom: 0px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition-duration: 0.3s;
+    transition-property: right;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+
+
+.cta--footer:hover:before, .cta--footer:focus:before, .cta--footer:active:before,  .cta--footer.active:before{
+  right:0;
+
+}*/

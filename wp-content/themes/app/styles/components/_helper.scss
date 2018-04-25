@@ -1,0 +1,202 @@
+/**
+*
+* Helper
+*
+**/
+
+/**********************************************/
+//debug
+@media (min-width: $wide){
+  .container {
+    width: inherit!important;
+  }
+
+
+}
+
+select {
+  /*  -webkit-appearance: none;*/
+    border: 0;
+    background: none;
+}
+
+
+/**********************************************/
+
+::-webkit-input-placeholder {
+   color: $colorBlue;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $colorBlue;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $colorBlue;
+}
+
+:-ms-input-placeholder {
+   color: $colorBlue;
+}
+
+.clear {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+/*==========  COLORS  ==========*/
+.color--blue{ color: $colorBlue; }
+.color--white{ color: $colorWhite; }
+
+
+/*==========  ANIMATIONS  ==========*/
+.fade {
+opacity: 0;
+-webkit-transition: opacity 0.85s ease-in-out;
+	   transition: opacity  0.85s ease-in-out;
+}
+
+/*==========  GENERIC  ==========*/
+.centered {
+  text-align: center;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.align-right{
+    text-align: right;
+}
+
+
+.overflow{ overflow: hidden;}
+
+.pull-left{ float: left; }
+.pull-right{ float: right; }
+
+.layer{ position: absolute; }
+
+.inline-block{ display: inline-block; }
+
+.boxshadow{ box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4); }
+
+
+/*==========  UTILS JU  ==========*/
+.img-rounded {
+  border-radius: 0;
+}
+
+.img-circle{
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+
+.img {
+  background-size: cover;
+  background-position: center 0;
+
+  background-color: #0051a8;
+}
+
+
+.img-responsive{
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    margin-bottom: 0;
+}
+
+.table-cell {
+    display: table-cell;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+
+    &.vtop{
+      vertical-align: top;
+    }
+}
+
+
+.ellipsis{
+   overflow:hidden;
+   display: inline-block;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   -o-text-overflow: ellipsis;
+}
+
+.ellipsis:after{
+  content:'...';
+}
+
+
+/*==========  animations  ==========*/
+[class^="hvr-"] {
+    background: transparent;
+    color: $colorWhite;
+    cursor: pointer;
+    text-decoration: none;
+}
+.hvr-underline-from-left {
+    backface-visibility: hidden;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0px);
+    vertical-align: middle;
+}
+.hvr-underline-from-left:before {
+    background: $colorOrange none repeat scroll 0 0;
+    bottom: 0px;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition-duration: 0.3s;
+    transition-property: right;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+a:hover, a:focus, a:active{
+  color: $colorWhite;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before,  .hvr-underline-from-left.active:before{
+  right:0;
+
+}
+
+
+/******************************************/
+/***** Scrollbar ******
+*******************************************/
+/*
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}*/

@@ -1,0 +1,57 @@
+/**
+*
+* Typography
+*
+**/
+
+// Just normalizing text
+// Recommend using padding instead of margin
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: 400;
+  color: $colorBlue;
+  letter-spacing:-1px;
+}
+
+// Definitions
+.small,
+small {
+  @include type--small;
+}
+
+.base,
+p,
+ul,
+ol {
+  @include type--base;
+  font-weight: 400;
+  color: $colorBlue;
+}
+
+.medium,
+h4 {
+  @include type--medium;
+}
+
+.large,
+h3 {
+  @include type--large;
+}
+.xlarge,
+h2 {
+  @include type--xlarge;
+}
+
+.xxlarge,
+h1 {
+  @include type--xxlarge;
+}
+
+.huge {
+  @include type--huge;
+}
+
+
+li > p {
+  padding-top: 0;
+}

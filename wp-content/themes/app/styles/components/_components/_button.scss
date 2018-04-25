@@ -1,0 +1,92 @@
+/**
+*
+* Button
+*
+**/
+
+.button {
+  display: inline-block;
+  padding: (($lineHeight / 2) - 1) 25px;
+  margin-bottom: $lineHeight / 2;
+  margin-top: $lineHeight / 2;
+  min-height: $lineHeight;
+
+  width: 100%;
+  max-width: 430px;
+
+
+  text-align: center;
+
+  font-family: $fontHighlight;
+  font-weight: 300;
+  text-decoration: none;
+  border: 1px solid  $colorBlue;
+
+  transition: none;
+
+  &:hover {
+    background: rgba(46,100,172,0.2);
+    border: 1px solid $colorBlue;
+    color:  $colorBlue;
+    text-decoration: none;
+  }
+}
+
+.button{
+  -webkit-transition-property:  background, color;
+  transition-property:  background, color;
+
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+// Mixin to create buttons
+@mixin style-button($color, $textColor, $isInverted: false) {
+
+  background: $color;
+  color: $textColor;
+  //border: 1px solid darken($color, 10%);
+  border: 1px solid  $colorBlue;
+
+  @if $isInverted { border-color: transparent;}
+}
+
+.button--submit {
+  @extend .button;
+  @include style-button($colorOrange, #ffffff);
+  border: 0;
+  &:hover{
+    background: rgba(220,74,50,1);
+    border: 0;
+    color:  $colorWhite;
+  }
+}
+
+.button--primary {
+  @extend .button;
+  @include style-button(#ffffff, $colorBlue);
+}
+
+.button--secondary {
+  @extend .button;
+  @include style-button($colorBlue, #ffffff);
+}
+
+.button--secondary-variation {
+  @extend .button;
+  @include style-button(#ffffff, $colorBlue, true);
+}
+
+
+
+// MEDIA QUERIES MOBILE
+@media all and (max-width: $medium) {
+  .faq{
+    .button{
+      max-width: 215px;
+    }
+  }
+}

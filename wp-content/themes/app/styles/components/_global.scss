@@ -1,0 +1,232 @@
+/**
+*
+* Global
+*
+**/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a:focus, a:active, a:visited, a:link, a:hover{
+  outline:none;
+/*  border: none;*/
+  text-decoration: none;
+}
+
+
+html,
+body,
+button {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+body {
+  font-family: $fontDefault;
+  font-size: $fontBase;
+  line-height: 1.333emem; /* 20px */
+  font-weight: 400;
+
+
+
+  @include baseline-grid();
+
+}
+
+.main-container {
+  min-height: 100%;
+}
+
+.container {
+  position: relative;
+  @include container(true);
+}
+
+.container-medium {
+  @include medium {
+    @include container(true);
+  }
+}
+
+.container-small {
+  @include small-only {
+    @include container(true);
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.desktop{ display: block; }
+.mobile{ display: none; }
+
+
+/*** template article ***/
+.article{
+  .entry-title{
+    text-align: center;
+  }
+  p{
+    /*color: #333333;*/
+      font-weight: 400;
+      padding: 0.8em 0 1.5em 0;
+  }
+
+  a:focus, a:active, a:visited, a:link, a:hover {
+  /*  outline: medium none;
+    text-decoration: underline;
+    color: $colorBlue;*/
+  }
+
+  blockquote {
+    border-left: 5px solid $colorBlue;
+  }
+  .title{
+    min-height: inherit;
+    font-weight: 400;
+    letter-spacing: -1px;
+  }
+
+  .visuel{
+    margin:0 0 20px;
+  }
+
+
+   .sstitle{
+     font-weight: 400;
+     letter-spacing: -1px;
+     line-height: 1.5000em;
+      padding-top: 2.000em;
+      padding-bottom: 0.0000em;
+   }
+
+
+}
+
+.page-template .news-article .documents .title,
+.page-template .news-article .documents ul {
+  max-width: inherit!important;
+}
+
+.page-template .news-article .documents .g-wide--1 {
+  margin: 0 25px 0 0;
+  width: 80px;
+}
+
+.page-template .news-article h2,
+.page-template .news-article h3{
+    max-width: inherit!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+
+}
+
+.global.news .news-article .documents .title,
+.global.news .news-article .documents ul {
+  max-width: inherit!important;
+}
+
+.global.news .news-article .documents .g-wide--1 {
+  margin: 0 25px 0 0;
+  width: 80px;
+}
+
+.global.news .news-article h2,
+.global.news .news-article h3{
+    max-width: inherit!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+
+}
+
+/** override / use css Wordpress **/
+.entry-content{
+
+  .wsp-container{
+    position: relative;
+    @include container(true);
+
+    padding-bottom: 20px;
+
+    ul{
+      display: bock;
+      text-align: center;
+      margin: 20px 0;
+
+      a{
+        text-decoration: underline;
+        font-weight: 400;
+
+        &:hover{ color: $colorOrange; text-decoration: none;}
+      }
+    }
+
+    .wsp-pages-title {
+      padding-top: 0;
+      display: bock;
+      text-align: center;
+    }
+  }
+
+  //contact
+  section.contact{
+    padding-bottom: 100px!important;
+  }
+
+  .pf-content{
+    .wpcf7-submit{
+      max-width: 240px;
+      float: right;
+      text-transform: uppercase;
+      margin-right: 2.5%;
+    }
+
+  }
+
+
+}
+
+
+/** Retina Screens  **/
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+
+}
+
+
+/** Larger Screens - desktops and tablets landscape **/
+@media all and (max-width: $mediumContainer) {
+
+
+
+}
+
+@media all and (max-width: $wide) {
+
+  .desktop{ display: none!important; }
+  .mobile{ display: block!important; }
+
+  .slick-slide img{
+    display: inherit!important;
+
+  }
+
+
+}
+
+// MEDIA QUERIES TABLETS PORTRAIT
+@media all and (min-width: $ipad768) and (max-width:$mediumContainer) {}
+
+@media all and (max-width: $ipad768) {}
+
+// MEDIA QUERIES MOBILE
+@media all and (max-width: $medium) {
+
+
+
+}
